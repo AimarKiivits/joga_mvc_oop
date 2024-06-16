@@ -41,9 +41,9 @@ class BaseSQLModel {
         return results;
     }
 
-    async create(data) {
+    async create(article) {
         const query = `INSERT INTO ${this.tableName} SET ?`;
-        const result = await this.executeQuery(query, data);
+        const result = await this.executeQuery(query, article);
         return result.insertId;
     }
 
